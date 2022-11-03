@@ -1,7 +1,5 @@
 import java.io.IOException;
 import java.util.ArrayList;
-//import java.util.Iterator;
-
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.xml.parsers.ParserConfigurationException;
