@@ -31,12 +31,6 @@ public class EstateAgency implements PropertyTransaction {
 		for (Property o : objectList) {
 			reportProperty(o.getSquareMeters(), o.getPricePerSquareMeter(), o.getCity(), o.getStreet(), o.getFloor());
 		}
-		//alternative solution:
-		/*Iterator<SaleObject> iter = objectList.iterator();
-		while (iter.hasNext()) {
-			SaleObject o = iter.next();
-			reportSaleObject(o.getSquareMeters(), o.getPricePerSquareMeter(), o.getCity(), o.getStreet(), o.getFloor());
-		}*/
 	}
 
 	@Override
@@ -82,11 +76,11 @@ public class EstateAgency implements PropertyTransaction {
 				if (Attr==PriorityOrderAttribute.City){
 					String c1=anObject.getCity();
 					String c2=anotherObject.getCity();
-					if (c1.compareToIgnoreCase(c2) > 0) {			    	//st‰derna j‰mfˆrs
+					if (c1.compareToIgnoreCase(c2) > 0) {			    	//st√§derna j√§mf√∂rs
 						swapElementsInArray(anObject, anotherObject, i, j);
 					}
-					else if(c1.compareToIgnoreCase(c2) == 0)            	//om st‰derna ‰r lika
-						if (st1.compareToIgnoreCase(st2) > 0) {         	//j‰mfˆrs gatunamnen 
+					else if(c1.compareToIgnoreCase(c2) == 0)            	//om st√§derna √§r lika
+						if (st1.compareToIgnoreCase(st2) > 0) {         	//j√§mf√∂rs gatunamnen 
 							swapElementsInArray(anObject, anotherObject, i, j);		    
 						}
 				}
@@ -95,11 +89,11 @@ public class EstateAgency implements PropertyTransaction {
 					int size2i=anotherObject.getSquareMeters();
 					String getPrice1=anObject.getPricePerSquareMeter();
 					String getPrice2=anotherObject.getPricePerSquareMeter();
-					if (size1i > size2i) {			    						//kvadratmeterna j‰mfˆrs
+					if (size1i > size2i) {			    						//kvadratmeterna j√§mf√∂rs
 						swapElementsInArray(anObject, anotherObject, i, j);
 					}
-					else if(size1i==size2i)            							//om kvadratmeterna ‰r lika
-						if (getPrice1.compareToIgnoreCase(getPrice2) > 0) { //j‰mfˆrs priserna 
+					else if(size1i==size2i)            							//om kvadratmeterna √§r lika
+						if (getPrice1.compareToIgnoreCase(getPrice2) > 0) { //j√§mf√∂rs priserna 
 							swapElementsInArray(anObject, anotherObject, i, j);	    
 						}
 				}
@@ -108,11 +102,11 @@ public class EstateAgency implements PropertyTransaction {
 					String price2=anotherObject.getPricePerSquareMeter();
 					int price1i=Integer.parseInt(price1);
 					int price2i=Integer.parseInt(price2);
-					if (price1i > price2i) {			    				//priset j‰mfˆrs
+					if (price1i > price2i) {			    				//priset j√§mf√∂rs
 						swapElementsInArray(anObject, anotherObject, i, j);
 					}
-					else if(price1i==price2i)           					//om priserna ‰r lika
-						if (st1.compareToIgnoreCase(st2) > 0) {         	//j‰mfˆrs gatunamnen
+					else if(price1i==price2i)           					//om priserna √§r lika
+						if (st1.compareToIgnoreCase(st2) > 0) {         	//j√§mf√∂rs gatunamnen
 							swapElementsInArray(anObject, anotherObject, i, j);		    
 						}
 				}
