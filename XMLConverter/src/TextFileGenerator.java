@@ -82,8 +82,8 @@ public class TextFileGenerator {
     private String getCharacters(XMLEvent event, XMLEventReader eventReader, char initial) {
         String dataLine = "";
         try {
-			event = eventReader.nextEvent();
-			if (event instanceof Characters) {
+		event = eventReader.nextEvent();
+		if (event instanceof Characters) {
 	            dataLine = event.asCharacters().getData();
 	            if (initial == '1') {
 	            	writeFile(file, dataLine);
@@ -95,10 +95,10 @@ public class TextFileGenerator {
 	            	writeFile(initial, file, dataLine);
 	            }
 	        }
-		} 
+	} 
         catch (XMLStreamException e) {
-			e.printStackTrace();
-		}
+		e.printStackTrace();
+	}
         return dataLine;
     }
     
